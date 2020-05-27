@@ -10,10 +10,11 @@
 <body>
     <div id="wrapper">  
     <header> 
-    <h1>National Park Service Collection Log in</h1>
+    <h1>National Park Service Information</h1>
     </header>  
-   <section> 
-       <p>This is a web application utilizing park information from the National Park Service API. On this home page you will see one hundred parks from the NPS API. <br>Users have the abiity to add new parks. In order for the park to be sucessfully added users need to provide the following: <br>
+   <section id="description-login"> 
+       <div id="page-description">
+       <p>This is a web application utilizing park information from the National Park Service API. On this home page users will see one hundred parks from the NPS API. Users have the abiity to create an account or login. On their profile page they have the ability to store parks they have visited. Users of this application are not required to create and account or login. Addtionally, users can add new parks. In order for the park to be sucessfully added users need to provide the following:</p>
         <ul>
             <li>State</li>
             <li>URL</li>
@@ -22,14 +23,16 @@
             <li>Latitude and Longitude</li>
             <li>Description</li>
         </ul>
+    <p>
         Addtionally, users will have the ability to edit information regarding the park on this page as well. 
     </p>
-    
+    </div>
+    <div id="login-forms">
     <form id="new-user">
         <h2>New User Signup</h2>
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Create Account">
+        <input type="submit" value="Create Account" class="submit">
     </form>
 
     <form id="login">
@@ -37,13 +40,14 @@
         <p class="is-logged-in">No user is logged in</p>
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Login">
-        <a href="/userProfile.html">My Profile</a>
+        <input type="submit" value="Login" class="submit">
     </form>
+    <a href="/userProfile.html">My Profile</a>
+    </div>
 </section>
 
 <main>
-    <br>
+    
    
 </main>
 
