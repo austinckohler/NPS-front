@@ -1,3 +1,5 @@
+const parksURL = 'http://localhost:3000/parks/'
+const ul = document.createElement("ul")
 const userSignupForm = document.querySelector("#new-user")
 const userLoginForm = document.querySelector("#login")
 const isLoggedIn = document.querySelector(".is-logged-in")
@@ -58,4 +60,39 @@ userLoginForm.addEventListener("submit", (event) => {
 function isLoggedOut(){
     localStorage.removeItem("token")
     setLogIn()
+}
+
+fetch(parksURL)
+    .then(response => response.json())
+    .then(parks => parks.map(showPark))
+
+
+function showPark(park) {
+    const parkCard = document.createElement("div")
+    parkCard.id = "park-card"
+    
+    park.alerts.map(alert => {
+        // console.log(alert)
+        const alertTitle = document.createElement("li")
+        const alertdescription = document.createElement("li")
+        // const alertdescription = document.createElement("h4")
+
+        alertTitle.innerText = "Alert Title:" + " " + alert.title 
+        alertdescription.innerText = "Alert Description:" + " " + alert.description
+
+    const name = document.createElement('h3')
+    const state = document.createElement('li')
+
+    name.innerHTML = park.name
+    console.log(name)
+    state.innerHTML = "State:" + " " + park.state
+
+    parkCard.append(name, ul, state, alertTitle, alertdescription)
+    document.body.append(parkCard)   
+
+    
+
+
+        console.log(alert.title)
+    })
 }

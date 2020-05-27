@@ -12,7 +12,7 @@
   );
 } */
 
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -21,7 +21,7 @@
   max-width: 1024px;
   margin: 0 auto;
   height: 100%;
-}
+} */
 
 h1 {
   text-align: center;
