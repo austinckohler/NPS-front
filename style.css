@@ -1,0 +1,32 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 20pt;
+    font-weight: normal;
+    
+    background: -webkit-linear-gradient(
+    -180deg,
+    lightblue,
+    rgb(223, 166, 92)
+  );
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+body {
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-image: url(https://images.unsplash.com/photo-1580130718810-358e5e8af61b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80);
+}

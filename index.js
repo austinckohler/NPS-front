@@ -1,7 +1,7 @@
 const userSignupForm = document.querySelector("#new-user")
 const userLoginForm = document.querySelector("#login")
 const isLoggedIn = document.querySelector(".is-logged-in")
-const logout = document.querySelector("#logout")
+
 
 userSignupForm.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -19,15 +19,17 @@ userSignupForm.addEventListener("submit", (event) => {
         },
         body: JSON.stringify({ username, password }), 
     }).then(() => {
+        alert("Log in was sucessfully created!")
         window.location.reload()
     })
 })
 
-function isLoggedIn() {
+function setLogIn() {
     isLoggedIn.textContent = localStorage.getItem("token")
     ? "You are logged in."
     : "No user is logged in."
 }
+setLogIn()
 
 userLoginForm.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -45,19 +47,15 @@ userLoginForm.addEventListener("submit", (event) => {
         },
         body: JSON.stringify({ username, password }), 
     }).then(response => response.json())
-        .then(response => {
-            const { token } = response 
-            localStorage.setItem("token", token)
-            isLoggedIn()
-        })
+    .then(response => {
+        const { token, username } = response 
+        localStorage.setItem("token", token)
+        localStorage.setItem("username", username)
+        setLogIn()
+    })
 })
     
 function isLoggedOut(){
     localStorage.removeItem("token")
-    isLoggedIn()
+    setLogIn()
 }
-
-logout.addEventListener("click", () => {
-    isLoggedOut()
-    isLoggedIn()
-})
