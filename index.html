@@ -8,9 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="wrapper">
-<header>
+    <div id="wrapper">  
+    <header> 
     <h1>National Park Service Collection Log in</h1>
+    </header>  
+   <section> 
+       <p>This is a web application utilizing park information from the National Park Service API. On this home page you will see one hundred parks from the NPS API. <br>Users have the abiity to add new parks. In order for the park to be sucessfully added users need to provide the following: <br>
+        <ul>
+            <li>State</li>
+            <li>URL</li>
+            <li>Weather</li>
+            <li>Name</li>
+            <li>Latitude and Longitude</li>
+            <li>Description</li>
+        </ul>
+        Addtionally, users will have the ability to edit information regarding the park on this page as well. 
+    </p>
+    
     <form id="new-user">
         <h2>New User Signup</h2>
         <input type="text" name="username" placeholder="Username">
@@ -24,9 +38,16 @@
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" value="Login">
+        <a href="/userProfile.html">My Profile</a>
     </form>
-    <a href="/userProfile.html">My Profile</a>
-</header>
+</section>
+
+<main>
+    <br>
+   
+</main>
+
+
 </div>
 </body>
 </html>
