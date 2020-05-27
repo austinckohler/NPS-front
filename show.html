@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="show.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>National Park Information</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html">Log In Page</a>
+        </nav>
+    </header>
+    <h1>National Parks</h1>
+    
+    <form id="update-form">
+        <h2>Edit Park</h2>
+            <input type="hidden" name="id" id="update-id">
+            <input type="text" name="state" placeholder="State" id="update-state">
+            <input type="text" name="weather" placeholder="Weather" id="update-weather">
+            <input type="text" name="fullName" placeholder="Park Name" id="update-name">
+            <input type="text" name="description" placeholder="Description" id="update-description">
+            <input type="submit" value="Update Park" class="submit">
+    </form>
+</body>
+
+</html>

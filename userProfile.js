@@ -1,14 +1,3 @@
-// import Brusher from 'brusher';
-// const brusher = new Brusher({
-//     image: 'https://images.unsplash.com/photo-1580130718810-358e5e8af61b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80', // Path of the image to be used as a brush
-//     keepCleared: true,     // Put the blur back after user has cleared it
-//     stroke: 80,            // Stroke size for the brush
-//     lineStyle: 'round',    // Brush style (round, square, butt)
-//     autoBlur: false,       // Brusher will use the provided image for the blurry background
-//     autoBlurValue: 15,     // Blur strength in pixels
-//   });
-  
-//   brusher.init();
 const updateUsername = document.querySelector("#update-username")
 const personalInfo = document.querySelector("#personal-info")
 const username = document.querySelector(".username")
