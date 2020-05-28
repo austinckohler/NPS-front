@@ -17,8 +17,8 @@ const updateId = document.querySelector("#update-id")
 
 fetch(parksURL)
     .then(response => response.json())
-    .then(park => displayPark(park))
-
+    .then(displayPark)
+    
 updateParkForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
@@ -52,15 +52,19 @@ function displayPark(park) {
     const name = document.createElement('h3')
     const lat_long = document.createElement('li')
     const description = document.createElement('p')
-    
+    const alertButton = document.createElement('button')
     const updateButton = document.createElement('button')
 
-    state.innerHTML = "State:" + " " + park.state
+    
+    
+    state.textContent = "State:" + " " + park.state
     url.innerHTML = `<a href=${park.url}>${park.url}</a>`
-    weather.innerHTML = "Weather:" + " " + park.weather
-    name.innerHTML = park.name
-    lat_long.innerHTML = "Latitude and Longitude:" + " " + park.lat_long
-    description.innerHTML = "Park Description:" + " " + park.description
+    weather.textContent = "Weather:" + " " + park.weather
+    name.textContent = park.name + " "
+    lat_long.textContent = "Latitude and Longitude:" + " " + park.lat_long
+    description.textContent = "Park Description:" + " " + park.description
+    park.alerts.forEach(alert => {
+        alertButton.innerHTML = `<a href=alert.html?id=${alert.park_id}>Park Alerts</a>`
     updateButton.textContent = "Update Park"
 
     updateButton.addEventListener('click', () => {
@@ -71,7 +75,8 @@ function displayPark(park) {
         updateId.value = park.id
     })
     
-    parkCard.append(name, description, weather, ul, state, url, lat_long)
-    name.append(updateButton)
+    parkCard.append(name, description, weather, ul, state, url, lat_long, )
+    name.append(alertButton, updateButton)
     document.body.append(parkCard)   
+    })
 }
