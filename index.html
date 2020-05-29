@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in Page</title>
     <script src="http://unpkg.com/brusher/dist/brusher.min.js" defer></script>
-    <script src="index.js" defer></script>
+    <script src="login.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="wrapper">  
     <header> 
         <nav>
-            <a href="/userProfile.html">My Profile</a>
-            <a href="/alert.html">Park Alerts</a>
+            <a href="/parks.html">Parks</a>
+            
+            <a href="/allalerts.html">All Park Alerts</a>
         </nav>
     <h1>National Park Service Information</h1>
     </header>  
@@ -35,6 +36,7 @@
     <div id="login-forms">
     <form id="new-user">
         <h2>New User Signup</h2>
+        
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" value="Create Account" class="submit">
@@ -42,28 +44,18 @@
 
     <form id="login">
         <h2>User Login</h2>
-        <p class="is-logged-in">No user is logged in</p>
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" value="Login" class="submit">
+        <p class="is-logged-in">No user is logged in</p>
     </form>
-    
+     <button><a href="/userProfile.html">My Profile</a></button>
+     <button id="logout-button">Logout</button>
     </div>
 </section>
 
 <main>
-    
-    <form id="new-park-form">
-        <h2>Add a New Park</h2>
-            <input type="text" name="state" placeholder="State">
-            <input type="url" name="url" placeholder="URL">
-            <input type="text" name="weather" placeholder="Weather">
-            <input type="text" name="fullName" placeholder="Park Name">
-            <input type="text" name="lat_long" placeholder="Latitude AND Longitude">
-            <input type="text" name="description" placeholder="Description">
-            <input type="submit" value="New Park" class="submit">
-    </form>
-   
+       
 </main>
 
 </div>

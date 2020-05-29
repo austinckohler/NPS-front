@@ -3,7 +3,6 @@ const params = window.location.search
 const searchParams = new URLSearchParams(params)
 const id = searchParams.get("id")
 
-
 const parksURL = `http://localhost:3000/parks/${id}`
 const ul = document.createElement("ul")
 
@@ -14,6 +13,7 @@ const updateWeather = document.querySelector("#update-weather")
 const updateName = document.querySelector("#update-name")
 const updateDescription = document.querySelector("#update-description")
 const updateId = document.querySelector("#update-id")
+const updateButton = document.querySelector("#update-button")
 
 fetch(parksURL)
     .then(response => response.json())
@@ -55,14 +55,12 @@ function displayPark(park) {
     const alertButton = document.createElement('button')
     const updateButton = document.createElement('button')
 
-    
-    
-    state.textContent = "State:" + " " + park.state
+    state.innerHTML = "State:" + " " + park.state
     url.innerHTML = `<a href=${park.url}>${park.url}</a>`
-    weather.textContent = "Weather:" + " " + park.weather
-    name.textContent = park.name + " "
-    lat_long.textContent = "Latitude and Longitude:" + " " + park.lat_long
-    description.textContent = "Park Description:" + " " + park.description
+    weather.innerHTML = "Weather:" + " " + park.weather
+    name.innerHTML = park.name + " "
+    lat_long.innerHTML = "Latitude and Longitude:" + " " + park.lat_long
+    description.innerHTML = "Park Description:" + " " + park.description
     park.alerts.forEach(alert => {
         alertButton.innerHTML = `<a href=alert.html?id=${alert.park_id}>Park Alerts</a>`
     updateButton.textContent = "Update Park"
@@ -80,3 +78,4 @@ function displayPark(park) {
     document.body.append(parkCard)   
     })
 }
+
