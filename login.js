@@ -1,11 +1,11 @@
 
 const brusher = new Brusher({
-    image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1203&q=80', // Path of the image to be used as a brush
+    image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80', // Path of the image to be used as a brush
     keepCleared: true,     // Put the blur back after user has cleared it
     stroke: 80,            // Stroke size for the brush
     lineStyle: 'round',    // Brush style (round, square, butt)
     autoBlur: true,       // Brusher will use the provided image for the blurry background
-    autoBlurValue: 10,     // Blur strength in pixels
+    autoBlurValue: 3,     // Blur strength in pixels
   });
   
   brusher.init();
@@ -15,6 +15,24 @@ const userLoginForm = document.querySelector("#login")
 const isLoggedIn = document.querySelector(".is-logged-in")
 const logoutButton = document.querySelector("#logout-button")
 
+const navSlide = () => {
+    const burger = document.querySelector(".burger")
+    const nav = document.querySelector(".nav-links")
+    const navLinks = document.querySelectorAll(".nav-links li") //toggles nav
+    burger.addEventListener("click", () => {
+        nav.classList.toggle('nav-active')
+        navLinks.forEach((link, index) => {   //animates links
+        if(link.style.animation){
+            link.style.animation = ''
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 0.6}s`
+        }
+    })
+    // burger animation
+    burger.classList.toggle("toggle")
+    }) 
+}
+navSlide()
 userSignupForm.addEventListener("submit", (event) => {
     event.preventDefault()
     const formData = new FormData(event.target)

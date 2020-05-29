@@ -10,16 +10,34 @@
 </head>
 <body id="show-body">
     <div class="wrapper">
-    <header>
-        <nav>
-            <a href="/index.html">Login</a>
-            <a href="/parks.html">All Parks</a>
-        </nav>
-    </header>
-    <h1>National Parks</h1>
+    <nav >
+        <div class="logo">
+        <h4>Navigation Links</h4>
+    </div>
+    <ul class="nav-links">
+        <li>
+           <a href="/">Login</a>
+        </li>
+        <li>
+            <a href="/parks.html">Parks</a> 
+        </li>
+        <li>
+            <a href="https://www.facebook.com/nationalparkservice/photos">NPS Photos</a>
+        </li>
+        <li>
+            <a href="https://www.nps.gov/index.htm">NPS Website</a>
+        </li>
+    </ul> 
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    </nav>
+    
+    <h1>Park</h1>
     
     <form id="update-form">
-        <h2>Edit Park</h2>
             <input type="hidden" name="id" id="update-id">
             <input type="text" name="state" placeholder="State" id="update-state">
             <input type="text" name="weather" placeholder="Weather" id="update-weather">

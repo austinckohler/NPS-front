@@ -9,7 +9,7 @@ fetch(alertsURL)
 function showAlerts(alerts) {
     alerts.forEach(alert => {
         const alertsCard = document.createElement("div")
-        alertsCard.id = "alerts-card"
+        alertsCard.id = "alert-card"
         const parkName = document.createElement("h2")
         const title = document.createElement('h5')
         const description = document.createElement('p')
