@@ -1,17 +1,5 @@
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: "Lato", sans-serif;
-    font-size: 20pt;
-    font-weight: normal;
-    
-    background: -webkit-linear-gradient(
-    -180deg,
-    lightblue,
-    rgb(223, 166, 92)
-  );
-} */
 
+/* PERTAINS TO ALL PAGES */
 * {
   box-sizing: border-box;
 }
@@ -26,13 +14,15 @@
 nav a {
 	float: left;
 	width: 50%;
-	text-align: center;
+  text-align: center;
+  color: rgb(241, 135, 27);
 	background: black;
 	font-weight: bold;
 	text-transform: uppercase;
   font-size: 18px;
   text-decoration: none;
 }
+
 #parks-nav a {
   float: left;
 	width: 33.33%;
@@ -48,9 +38,69 @@ nav a:hover {
 	background: #ffffff;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+p, li {
+  font-weight: bold;
+  font-size: 19px;
+    color: rgb(0, 8, 0);
+    text-shadow: -1px 0 20px rgb(241, 135, 27), 0 1px 20px rgb(224, 132, 38), 1px 0 11px rgb(224, 132, 38), 0 -1px black;
+}
+
 h1 {
   text-align: center;
-  text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px 
+  font-weight: bold;
+  font-size: 65px;
+  color: rgb(0, 8, 0);
+  text-shadow: -1px 0 20px rgb(241, 135, 27), 0 1px 20px rgb(224, 132, 38), 1px 0 11px rgb(224, 132, 38), 0 -1px black;
+}
+
+canvas {
+  height: 100%;
+}
+
+#index-body {
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-image: url(https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1203&q=80);
+}
+/* INDEX PAGE */
+
+#description-login {
+  font-weight: bold;
+  font-size: 20px;
+    color: rgb(0, 8, 0);
+    text-shadow: -1px 0 20px rgb(241, 135, 27), 0 1px 20px rgb(224, 132, 38), 1px 0 11px rgb(224, 132, 38), 0 -1px black;
+}
+
+#login-forms {
+  font-size: 28px;
+}
+
+/* PARKS PAGE */
+#parks-body {
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-image: url(https://images.unsplash.com/photo-1573611173195-941c9c89b2ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2590&q=80);
+}
+ h2 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(0, 8, 0);
+    text-shadow: -1px 0 20px rgb(241, 135, 27), 0 1px 20px rgb(224, 132, 38), 1px 0 11px rgb(224, 132, 38), 0 -1px black;
+ }
+
+#add-park {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-left: 39%;
+  font-size: 30px;
 }
 #park-container {
     display: flex;
@@ -63,25 +113,33 @@ h1 {
     margin: auto;
 }
 #park-card {
-    width: 20%;
-    
+    width: 33.33%;
     padding: 3.5%;
     justify-content: center;
 }
-
-
-p, li {
-  /* text-shadow: 0px 0px 10px rgb(224, 132, 38); */
-  font-size: large;
-  text-shadow: -1px 0 8px rgb(224, 132, 38), 0 1px 8px rgb(148, 88, 27), 1px 0 5px; 
+/* PARK CARD LINKS */
+#park-card a {
+    color: rgb(0, 8, 0);
+    text-shadow: -1px 0 20px rgb(241, 135, 27), 0 1px 20px rgb(224, 132, 38), 1px 0 11px rgb(224, 132, 38), 0 -1px black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 1100;
 }
 
-html {
-  background-size: cover;
-  background-position: 0 0;
-  background-attachment: fixed;
-  background-image: url(https://images.unsplash.com/photo-1580130718810-358e5e8af61b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80);
+#park-card a:visited {
+  color: rgb(0, 0, 0);
 }
+
+#park-card a:hover {
+  background: rgba(43, 199, 238, 0.103); 
+  color: rgb(238, 161, 59);
+}
+
+#park-card a:active {
+  color: rgb(255, 255, 255);
+}
+
+
 
 #description-login {
   display: flex;
@@ -102,10 +160,14 @@ html {
   
 }
 input {
+  text-align: center;
+  background-color: #e7c376;
   border-radius: 6px;
   width: 20%;
   margin: .5rem;
+  color: black;
 }
+
 
 #update-username > input {
   width: 15%;
@@ -123,8 +185,7 @@ input {
 
 button {
   border-radius: 6px;
-  /* width: 40%; */
-  /* margin: .5rem; */
+  background-color: #e7c376;
 }
 
 button a {
@@ -132,3 +193,119 @@ button a {
   color: inherit;
 }
 
+#all-alerts-body {
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-image: url(https://images.unsplash.com/photo-1468682958800-5a3a4ede03a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2625&q=80);
+}
+
+#show-body {
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-image: url(https://images.unsplash.com/photo-1571076373597-04011a79c0e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80);
+}
+
+#user-profile-body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 20pt;
+    font-weight: normal;
+    
+    background: -webkit-linear-gradient(
+    -180deg,
+    lightblue,
+    rgb(16, 96, 143)
+  );
+}
+
+
+/* @media only screen and (max-width: 765px) {
+	.background1 {
+		flex-direction: column;
+		clear: both;
+		}
+	#easterisland {
+		width: 100%;
+		max-width: 620px;
+		} 
+	
+	#name {
+		width: 100%;
+} */
+
+@media only screen and (max-width: 480px) {
+	nav {
+		float: none;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 2;
+	} 
+	nav a {
+		width: 100%;
+		margin:auto;
+  }
+  #parks-nav a {
+    width: 100%;
+		margin:auto;
+  }
+  #description-login {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    text-align: justify;
+  } 
+  #login-forms input {
+    width: 8rem;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  #page-description {
+    margin: auto;
+    width: 100%;
+  }
+
+  #park-card a {
+    color: rgb(0, 8, 0);
+    text-shadow: -1px 0 20px rgb(241, 135, 27), 0 1px 20px rgb(224, 132, 38), 1px 0 11px rgb(224, 132, 38), 0 -1px black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 1100;
+}
+#add-park input {
+  margin: .2rem;
+  padding: .02rem;
+  width: 8rem;
+}
+  /*
+	#name h1 {
+		font-size: 2.6em;
+		padding-bottom: .3em;
+	}
+	#name h2 {
+		font-size: 1.7em;
+		line-height: 1.3em;
+	}
+	section h6 {
+		font-size: 1.5em;
+	}
+	.flexbox {
+		flex-direction: column;
+	}
+	.blogtitle {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.slogan, p, ul {
+		font-size: .95em;
+	}
+	.slogan, h4 {
+		font-size: 1.2em;
+	}
+}
+} */
