@@ -1,7 +1,32 @@
 const parksURL = 'http://localhost:3000/parks/'
-const parkForm = document.querySelector("#add-park")
-console.log(parkForm)
+const parkContainer = document.createElement("div")
+parkContainer.id = "park-container"
 
+document.addEventListener("DOMContentLoaded", () => {
+    const parkForm = document.querySelector("#add-park")
+    parkForm.addEventListener("submit", (event) => {
+        event.preventDefault()
+        const parkData = new FormData(event.target)
+        const state = parkData.get('state')
+        const url = parkData.get('url')
+        const weather = parkData.get('weather')
+        const name = parkData.get('fullName')
+        const lat_long = parkData.get('lat_long')
+        const description = parkData.get('description')
+        const newPark = {state ,url, weather, name, lat_long, description} 
+
+        showPark(newPark)
+            
+        fetch(parksURL, {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json',
+                    'accept': 'application/json'
+                },
+                body: JSON.stringify(newPark)
+        })
+    })
+  })
 
 fetch(parksURL)
     .then(response => response.json())
@@ -23,39 +48,7 @@ function showPark(park) {
             method: "DELETE"
         })
     })
-
+    parkContainer.append(parkCard)
     parkCard.append(name, button)
-    document.body.append(parkCard)   
+    document.body.append(parkContainer)   
 }
-
-
-newParkForm.addEventListener('submit', (event) => {
-    event.preventDefault()
-        
-    const parkData = new FormData(event.target)
-    const state = parkData.get('state')
-    const url = parkData.get('url')
-    const weather = parkData.get('weather')
-    const name = parkData.get('fullName')
-    const lat_long = parkData.get('lat_long')
-    const description = parkData.get('description')
-    const newPark = {
-        state: state, 
-        url: url, 
-        weather: weather,
-        name: name, 
-        lat_long: lat_long, 
-        description: description
-    }
-        
-    showPark(newPark)
-        
-    fetch(parksURL, {
-            method: "POST",
-            headers: {
-                'content-type': 'application/json',
-                'accept': 'application/json'
-            },
-            body: JSON.stringify(newPark)
-    })
-})

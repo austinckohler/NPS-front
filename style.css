@@ -12,7 +12,7 @@
   );
 } */
 
-/* * {
+* {
   box-sizing: border-box;
 }
 
@@ -21,12 +21,54 @@
   max-width: 1024px;
   margin: 0 auto;
   height: 100%;
-} */
+}
+
+nav a {
+	float: left;
+	width: 50%;
+	text-align: center;
+	background: black;
+	font-weight: bold;
+	text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+}
+#parks-nav a {
+  float: left;
+	width: 33.33%;
+	text-align: center;
+	background: black;
+	font-weight: bold;
+	text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav a:hover {
+	background: #ffffff;
+}
 
 h1 {
   text-align: center;
-  text-shadow: -1px 0 20px black, 0 1px 20px black, 1px 0 11px 
+  text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px 
 }
+#park-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
+    height: 100%;
+    margin: 5px;
+    text-align: center;
+    margin: auto;
+}
+#park-card {
+    width: 20%;
+    
+    padding: 3.5%;
+    justify-content: center;
+}
+
 
 p, li {
   /* text-shadow: 0px 0px 10px rgb(224, 132, 38); */
@@ -34,7 +76,7 @@ p, li {
   text-shadow: -1px 0 8px rgb(224, 132, 38), 0 1px 8px rgb(148, 88, 27), 1px 0 5px; 
 }
 
-body {
+html {
   background-size: cover;
   background-position: 0 0;
   background-attachment: fixed;
@@ -79,4 +121,14 @@ input {
   border-radius: 6px;
 }
 
+button {
+  border-radius: 6px;
+  /* width: 40%; */
+  /* margin: .5rem; */
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
 

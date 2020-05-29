@@ -5,7 +5,9 @@ const id = searchParams.get("id")
 
 const parksURL = `http://localhost:3000/parks/${id}`
 const ul = document.createElement("ul")
+const wrapper = document.querySelector(".wrapper")
 
+console.log(wrapper)
 //Update form and id's
 const updateParkForm = document.querySelector('#update-form')
 const updateState = document.querySelector("#update-state")
@@ -43,8 +45,8 @@ updateParkForm.addEventListener('submit', (event) => {
 })
 
 function displayPark(park) {
-    const parkCard = document.createElement("div")
-    parkCard.id = "park-card"
+    const showCard = document.createElement("div")
+    showCard.id = "show-card"
     
     const state = document.createElement('li')
     const url = document.createElement('li')
@@ -73,9 +75,9 @@ function displayPark(park) {
         updateId.value = park.id
     })
     
-    parkCard.append(name, description, weather, ul, state, url, lat_long, )
+    showCard.append(name, description, weather, ul, state, url, lat_long, )
     name.append(alertButton, updateButton)
-    document.body.append(parkCard)   
+    wrapper.append(showCard)   
     })
 }
 
