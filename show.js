@@ -40,7 +40,7 @@ updateParkForm.addEventListener('submit', (event) => {
             'content-type': 'application/json',
             'accept': 'application/json'
         },
-        body: JSON.stringify(newPark)
+        body: JSON.stringify(updatedPark)
     })
 })
 
@@ -78,6 +78,6 @@ function displayPark(park) {
     showCard.append(name, description, weather, ul, state, url, lat_long, )
     name.append(alertButton, updateButton)
     wrapper.append(showCard)   
-    })
+    // })
 }
-
+    )}

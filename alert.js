@@ -15,8 +15,8 @@ function showAlerts(parks) {
     parks.alerts.forEach(alert => {
        
         const alertTitle = document.createElement('h4')
-        const alertDescription = document.createElement('h4')
-        const alertCategory = document.createElement('h5')
+        const alertDescription = document.createElement('p')
+        const alertCategory = document.createElement('p')
 
     alertTitle.textContent = alert.title
     alertDescription.textContent = "Description:" + " " + alert.description

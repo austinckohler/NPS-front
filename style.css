@@ -254,6 +254,15 @@ button a {
   border-radius: 10px;
   font-weight: bolder;
   text-shadow: 0 0 3px rgb(78, 139, 252);
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  line-height: 3rem;
+  text-align: justify;
+}
+#show-card > p {
+  line-height: 2.2rem;
+  font-size: initial;
 }
 #alert-card {
   color: rgba(255, 255, 255, 0.603);
@@ -261,9 +270,24 @@ button a {
   border-radius: 10px;
   font-weight: bolder;
   text-shadow: 0 0 3px rgb(78, 139, 252);
-  font-size: 20px;
+  font-size: 29px;
   padding: 1.5rem;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  line-height: 3rem;
+  text-align: justify;
 }
+#alert-card > p {
+  font-size: initial;
+}
+#show-card > h3 {
+  font-size: 30px;
+  text-align: center;
+  break-inside: auto;
+}
+
+
 #user-profile-body {
     margin: 0;
     padding: 0;
