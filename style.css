@@ -284,9 +284,7 @@ button a {
 #show-card > h3 {
   font-size: 30px;
   text-align: center;
-  break-inside: auto;
 }
-
 
 #user-profile-body {
     margin: 0;
