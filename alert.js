@@ -2,6 +2,9 @@ const params = window.location.search
 const searchParams = new URLSearchParams(params)
 const id = searchParams.get("id")
 const parksURL = `http://localhost:3000/parks/${id}`
+const alertContainer = document.createElement("div")
+alertContainer.id = "alert-container"
+const wrapper = document.querySelector(".wrapper")
 
 fetch(parksURL)
     .then(response => response.json())
@@ -21,8 +24,10 @@ function showAlerts(parks) {
     alertTitle.textContent = alert.title
     alertDescription.textContent = "Description:" + " " + alert.description
     alertCategory.textContent = "Alert Category:" + " " + alert.category
+    
+    alertContainer.append(alertCard)
     alertCard.append(alertTitle, alertDescription, alertCategory)
-    document.body.append(alertCard)
-
+    // document.body.append(alertContainer)
+    wrapper.append(alertContainer)
     });
 }

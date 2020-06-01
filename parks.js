@@ -1,6 +1,7 @@
 const parksURL = 'http://localhost:3000/parks/'
 const parkContainer = document.createElement("div")
 parkContainer.id = "park-container"
+const wrapper = document.querySelector(".wrapper")
 
 document.addEventListener("DOMContentLoaded", () => {
     const parkForm = document.querySelector("#add-park")
@@ -48,7 +49,10 @@ function showPark(park) {
             method: "DELETE"
         })
     })
+    wrapper.append(parkContainer) 
     parkContainer.append(parkCard)
     parkCard.append(name, button)
-    document.body.append(parkContainer)   
+      
 }
+
+

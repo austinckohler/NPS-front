@@ -1,6 +1,6 @@
 const alertsURL = 'http://localhost:3000/alerts/'
 const ul = document.createElement("ul")
-
+const wrapper = document.querySelector(".wrapper")
 
 fetch(alertsURL)
     .then(response => response.json())
@@ -9,7 +9,7 @@ fetch(alertsURL)
 function showAlerts(alerts) {
     alerts.forEach(alert => {
         const alertsCard = document.createElement("div")
-        alertsCard.id = "alert-card"
+        alertsCard.id = "alerts-card"
         const parkName = document.createElement("h2")
         const title = document.createElement('h5')
         const description = document.createElement('p')
@@ -20,9 +20,8 @@ function showAlerts(alerts) {
         description.innerHTML = alert.description
         category.innerHTML = alert.category
 
-        alertsCard.append(parkName)
-        parkName.append(title, description, category)
-        document.body.append(alertsCard)  
+        alertsCard.append(parkName, title, description, category)
+        wrapper.append(alertsCard)  
     }
     )}
 
