@@ -35,7 +35,7 @@ updateUsername.addEventListener("submit", (event) => {
             "Authorization": `bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify({ username})
-    }).then(() => alert("Your username has been updated"))
+    }).then(() => alert(`${localStorage.getItem("username")}, your infomation has been updated`))
 })
 
 logout.addEventListener("click", () => {
